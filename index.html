@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Verdadeira ou Falsa Inicial</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="jogo">
+      <p class="informacoes">
+        <b><span id="tempo">3</span></b>
+        · <span id="pontos">0</span>
+      </p>
+      <p class="principal">
+        <b id="letra"></b> DE <b id="palavra"></b>
+      </p>
+      <p class="btns">
+        <button onclick="checar(true);">VERDADEIRO</button>
+        <button onclick="checar(false);">FALSO</button>
+      </p>
+    </div>
+    <div id="fim" hidden="">
+      <p class="principal" style="margin-bottom: 0px;">
+        <b>FIM DE JOGO!</b>
+      </p>
+      <p class="informacoes">
+        SUA PONTUAÇÃO: <span id="total">12</span>
+        <br>SUA MAIOR PONTUAÇÃO: <span id="maior">0</span>
+      </p>
+      <p><button onclick="voltar();">VOLTAR</button></p>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
