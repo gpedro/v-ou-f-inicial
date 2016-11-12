@@ -6,7 +6,14 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div id="jogo">
+    <div id="inicio">
+        <h1>VERDADEIRA<br>OU FALSA INICIAL</h1>
+        <p class="informacoes">
+            SUA MAIOR PONTUAÇÃO: <span id="maior">0</span>
+        </p>
+        <button>INICIAR JOGO</button>
+    </div>
+    <div id="jogo" hidden="">
       <p class="informacoes">
         <b><span id="tempo">3</span></b>
         · <span id="pontos">0</span>
@@ -18,7 +25,6 @@
         <button onclick="checar(true);">VERDADEIRA</button>
         <button onclick="checar(false);">FALSA</button>
       </p>
-      <p class="copy">2016 (C) THEUVES</p>
     </div>
     <div id="fim" hidden="">
       <p class="principal" style="margin-bottom: 0px;">
@@ -30,6 +36,6 @@
       </p>
       <p><button class="x" onclick="novo();">NEW GAME</button></p>
     </div>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
   </body>
 </html>
