@@ -20,22 +20,34 @@ function adicionar() {
         'VACA', 'XICACA', 'ZEBRA'
     ];
 
-    function buscar(letra) {
-        var l;
+    function buscar(letra1) {
+        var l1, l2;
 
-        palavras.forEach(function (palavra) {
-            if (palavra[0] === letra) {
-                l = palavra;
+        function get(ltr) {
+            var x;
 
-                return;
-            }
-        });
+            palavras.forEach(function (palavra) {
+                if (palavra[0] === ltr) {
+                    x = palavra;
 
-        return l;
+                    return;
+                }
+            });
+
+            return x;
+        }
+
+        letras = letras.join('').replace(letra1, '').split('');
+        var letra2 = letras[rand(letra1.length - 1)];
+
+        return [
+            get(letra1),
+            get(letra2)
+        ];
     }
 
     var letra = letras[rand(letras.length - 1)];
-    var opcoes = [buscar(letra), palavras[rand(palavras.length - 1)]];
+    var opcoes = buscar(letra)
     var palavra = opcoes[rand(opcoes.length - 1)];
 
     document.querySelector('#letra').innerHTML = letra;
