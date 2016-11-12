@@ -9,9 +9,9 @@
     <div id="inicio">
         <h1>VERDADEIRA<br>OU FALSA INICIAL</h1>
         <p class="informacoes">
-            SUA MAIOR PONTUAÇÃO: <span id="maior">0</span>
+            SUA MAIOR PONTUAÇÃO: <span id="record">0</span>
         </p>
-        <button>INICIAR JOGO</button>
+        <button onclick="iniciar();">NOVO JOGO</button>
     </div>
     <div id="jogo" hidden="">
       <p class="informacoes">
@@ -34,8 +34,10 @@
         SUA PONTUAÇÃO: <span id="total">12</span>
         <br>SUA MAIOR PONTUAÇÃO: <span id="maior">0</span>
       </p>
-      <p><button class="x" onclick="novo();">NEW GAME</button></p>
+      <p>
+        <button onclick="novo();">VOLTAR</button>
+      </p>
     </div>
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
   </body>
 </html>

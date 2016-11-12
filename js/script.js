@@ -8,7 +8,10 @@ if (!localStorage.getItem('maior')) {
 }
 
 var record = localStorage.getItem('maior');
+document.querySelector('#record').innerHTML = record;
 document.querySelector('#maior').innerHTML = record;
+
+var tempo;
 
 function rand(num) {
     return parseInt(Math.random() * (1 + num));
@@ -57,8 +60,6 @@ function adicionar() {
     document.querySelector('#palavra').innerHTML = palavra;
 }
 
-adicionar();
-
 var interval = function() {
     var seg = parseInt(document.querySelector('#tempo').innerHTML) - 1;
 
@@ -69,7 +70,14 @@ var interval = function() {
     }
 }
 
-var tempo = setInterval(interval, 1000);
+function iniciar() {
+    adicionar();
+
+    tempo = setInterval(interval, 1000);
+
+    document.querySelector('#inicio').hidden = true;
+    document.querySelector('#jogo').hidden = false;
+}
 
 function fimDeJogo() {
     clearInterval(tempo);
@@ -94,12 +102,12 @@ function fimDeJogo() {
 
 function novo() {
   document.querySelector('#fim').hidden = true;
-  document.querySelector('#jogo').hidden = false;
+  document.querySelector('#inicio').hidden = false;
 
   document.querySelector('#total').innerHTML = 0;
 
-  adicionar();
-  tempo = setInterval(interval, 1000);
+  var maior = document.querySelector('#maior').innerHTML;
+  document.querySelector('#record').innerHTML = maior;
 }
 
 function avancar() {
