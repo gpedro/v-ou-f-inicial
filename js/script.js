@@ -123,3 +123,13 @@ function checar(val) {
         l === p[0] ? fimDeJogo() : avancar();
     }
 }
+
+window.addEventListener('keydown', function (event) {
+    if (!document.querySelector('#jogo').hidden) {
+        if (event.keyCode === 37) {
+            checar(true)
+        } else if (event.keyCode === 39) {
+            checar(false);
+        }
+    } else if (event.keyCode === 13) voltar();
+});
