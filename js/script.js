@@ -92,7 +92,7 @@ function fimDeJogo() {
     document.querySelector('#pontos').innerHTML = 0;
 }
 
-function voltar() {
+function novo() {
   document.querySelector('#fim').hidden = true;
   document.querySelector('#jogo').hidden = false;
 
@@ -131,5 +131,5 @@ window.addEventListener('keydown', function (event) {
         } else if (event.keyCode === 39) {
             checar(false);
         }
-    } else if (event.keyCode === 13) voltar();
+    } else if (event.keyCode === 13) novo();
 });
