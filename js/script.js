@@ -35,8 +35,7 @@ function adicionar() {
     }
 
     var letra = letras[rand(letras.length - 1)];
-    var opcoes = [buscar(letra), palavras[rand(palavras.length - 1)],
-        palavras[rand(palavras.length - 1)]];
+    var opcoes = [buscar(letra), palavras[rand(palavras.length - 1)]];
     var palavra = opcoes[rand(opcoes.length - 1)];
 
     document.querySelector('#letra').innerHTML = letra;
