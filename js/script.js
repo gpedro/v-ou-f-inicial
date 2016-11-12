@@ -7,6 +7,9 @@ if (!localStorage.getItem('maior')) {
     localStorage.setItem('maior', '0');
 }
 
+var record = localStorage.getItem('maior');
+document.querySelector('#maior').innerHTML = record;
+
 function rand(num) {
     return parseInt(Math.random() * (1 + num));
 }
@@ -38,7 +41,7 @@ function adicionar() {
         }
 
         letras = letras.join('').replace(letra1, '').split('');
-        var letra2 = letras[rand(letra1.length - 1)];
+        var letra2 = letras[rand(letras.length - 1)];
 
         return [
             get(letra1),
@@ -80,9 +83,12 @@ function fimDeJogo() {
     document.querySelector('#total').innerHTML = pontos;
 
     var maior = localStorage.getItem('maior');
-    if (maior < pontos) localStorage.setItem('maior', pontos);
 
-    document.querySelector('#maior').innerHTML = maior;
+    if (parseInt(pontos) > parseInt(maior)) {
+        localStorage.setItem('maior', pontos);
+        document.querySelector('#maior').innerHTML = pontos;
+    }
+
     document.querySelector('#pontos').innerHTML = 0;
 }
 
