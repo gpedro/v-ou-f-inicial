@@ -139,5 +139,9 @@ window.addEventListener('keydown', function (event) {
         } else if (event.keyCode === 39) {
             checar(false);
         }
-    } else if (event.keyCode === 13) novo();
+    } else if (!document.querySelector('#fim').hidden) {
+        if (event.keyCode === 13) novo();
+    } else if (!document.querySelector('#inicio').hidden) {
+        if (event.keyCode === 13) iniciar();
+    }
 });
