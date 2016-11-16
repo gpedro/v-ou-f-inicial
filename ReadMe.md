@@ -2,7 +2,7 @@
 
 > Verdadeira ou Falsa Inicial.
 
-Veja em: &lt;https://joguinhos.github.io/v-ou-f-inicial&gt;
+Veja em: &lt;https://joguinhos.github.io/v-ou-f-inicial&gt;.
 
 ## Atalhos do Teclado
 
